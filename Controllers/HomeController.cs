@@ -27,9 +27,9 @@ namespace UserApi.Controllers
         }
         [HttpGet("GetUser")]
 
-        public ActionResult<IEnumerable<User>> GetUser([FromBody] User req)
+        public ActionResult<IEnumerable<User>> GetUser([FromBody] int id)
         {
-            var user = _aPIDbContext.Users.FirstOrDefault(x => x.Id == req.Id);
+            var user = _aPIDbContext.Users.FirstOrDefault(x => x.Id == id);
             user.Address = _aPIDbContext.Address.FirstOrDefault(y => y.Id == user.AddressId);
 
 
@@ -63,15 +63,7 @@ namespace UserApi.Controllers
             return Ok();
         }
 
-        [HttpPost("create")]
 
-        public IActionResult Cr([FromBody] User req)
-        {
-            User user = new User();
-            _aPIDbContext.Users.Add(user);
-            _aPIDbContext.SaveChanges();
-            return Ok();
-        }
         [HttpPut("Update")]
         public IActionResult Update([FromBody] User req)
         {
@@ -104,7 +96,7 @@ namespace UserApi.Controllers
             var user = _aPIDbContext.Users.FirstOrDefault(x => x.Id == Id);
             if (user == null)
             {
-                return StatusCode(404, "User with id {req.Id} not found");
+                return StatusCode(404, "User with id {Id} not found");
             }
             _aPIDbContext.Entry(user).State = EntityState.Deleted;
             _aPIDbContext.SaveChanges();
