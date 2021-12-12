@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "8c79294d-9425-4da3-9fef-8c4b6f653f97",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:5001/kkk/CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FirstName\": \"aJqwqan\",\r\n    \"LastName\": \"Kowalski\",\r\n    \"Gender\": true,\r\n    \"Weight\": 50.1,\r\n    \"DateOfBirth\": \"2019-07-26\",\r\n    \"Address\": {\r\n        \"Country\": \"Polska\",\r\n        \"City\": \"Bialystok\",\r\n        \"PostCode\": \"22-222\",\r\n        \"Street\": \"Wiejska\",\r\n        \"HouseNumber\": \"2332\"\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/kkk/CreateUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"kkk",
+						"CreateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/kkk/GetUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/kkk/GetUsers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"kkk",
+						"GetUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/kkk/Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"Id\": 7,\r\n    \"FirstName\": \"ran\",\r\n    \"LastName\": \"Kowalski\",\r\n    \"Gender\": true,\r\n    \"Weight\": 50.1,\r\n    \"Address\": {\r\n        \"Country\": \"Polska\",\r\n        \"City\": \"Bialystok\",\r\n        \"PostCode\": \"22-222\",\r\n        \"Street\": \"Wiejska\",\r\n        \"HouseNumber\": \"2332\"\r\n    }\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/kkk/Update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"kkk",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/kkk/DeleteUser/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/kkk/DeleteUser/90",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"kkk",
+						"DeleteUser",
+						"90"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/kkk/GetUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "7",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/kkk/GetUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"kkk",
+						"GetUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
