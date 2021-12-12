@@ -96,7 +96,7 @@ namespace UserApi.Controllers
             var user = _aPIDbContext.Users.FirstOrDefault(x => x.Id == Id);
             if (user == null)
             {
-                return StatusCode(404, "User with id {Id} not found");
+                return StatusCode(404, $"User with id {Id} not found");
             }
             _aPIDbContext.Entry(user).State = EntityState.Deleted;
             _aPIDbContext.SaveChanges();
